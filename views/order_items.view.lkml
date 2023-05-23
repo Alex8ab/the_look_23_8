@@ -68,6 +68,9 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
 
+
+
+
   parameter: item_to_add_up {
     type: unquoted
     allowed_value: {
