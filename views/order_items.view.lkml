@@ -74,14 +74,14 @@ view: order_items {
       label: "Total Sale Price"
       value: "sale_price"
     }
-    # allowed_value: {
-    #   label: "Total Cost"
-    #   value: "cost"
-    # }
-    # allowed_value: {
-    #   label: "Total Profit"
-    #   value: "profit"
-    # }
+    allowed_value: {
+      label: "Total Cost"
+      value: "cost"
+    }
+    allowed_value: {
+      label: "Total Profit"
+      value: "profit"
+    }
   }
 
   measure: dynamic_sum {
