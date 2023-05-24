@@ -66,10 +66,8 @@ view: order_items {
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
+    suggest_persist_for: "0 hour"
   }
-
-
-
 
   parameter: item_to_add_up {
     type: unquoted
