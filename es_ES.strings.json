@@ -1,5 +1,6 @@
 {
-  "Total Sale Price": "Total Precio de Venta",
+  "Total Sale Price" : "Total Precio de Venta",
   "Total Cost" : "Costo Total",
-  "Total Profit" : "Beneficio Total"
+  "Total Profit" : "Beneficio Total",
+  "Item to Add Up Label" : "Etiqueta de Item a Agregar"
 }

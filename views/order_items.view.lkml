@@ -69,7 +69,13 @@ view: order_items {
     suggest_persist_for: "0 hour"
   }
 
+  # dimension: cost {
+  #   type: number
+  #   sql: ${TABLE}.cost ;
+  # }
+
   parameter: item_to_add_up {
+    label: "Item to Add Up Label"
     type: unquoted
     allowed_value: {
       label: "Total Sale Price"
@@ -87,7 +93,7 @@ view: order_items {
 
   measure: dynamic_sum {
     type: sum
-    sql: ${TABLE}.{% parameter item_to_add_up %} ;;
+    sql: ${TABLE}.{% parameter tem_to_aidd_up %} ;;
     label_from_parameter: item_to_add_up
     value_format_name: "usd"
   }
@@ -111,6 +117,7 @@ view: order_items {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    # sql: LEFT(${TABLE}.status, 3);;
   }
 
   dimension: user_id {
