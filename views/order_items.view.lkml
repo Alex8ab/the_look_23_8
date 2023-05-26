@@ -1,6 +1,5 @@
 view: order_items {
-  sql_table_name: `e_commerce.order_items`
-    ;;
+  sql_table_name: `e_commerce.order_items`;;
   drill_fields: [id]
 
   dimension: id {
@@ -66,13 +65,8 @@ view: order_items {
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
-    suggest_persist_for: "0 hour"
+    # suggest_persist_for: "0 hour"
   }
-
-  # dimension: cost {
-  #   type: number
-  #   sql: ${TABLE}.cost ;
-  # }
 
   parameter: item_to_add_up {
     label: "Item to Add Up Label"
@@ -93,7 +87,7 @@ view: order_items {
 
   measure: dynamic_sum {
     type: sum
-    sql: ${TABLE}.{% parameter tem_to_aidd_up %} ;;
+    sql: ${TABLE}.{% parameter item_to_add_up %} ;;
     label_from_parameter: item_to_add_up
     value_format_name: "usd"
   }
